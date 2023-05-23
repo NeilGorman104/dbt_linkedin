@@ -1,8 +1,11 @@
 name: 'linkedin'
 version: '0.7.0'
+profile: 'FIVETRAN_TEST_LINKEDIN'
 config-version: 2
 require-dbt-version: [">=1.3.0", "<2.0.0"]
 vars:
+  linkedin_ads_database: RYAN_MIRANDA_RAW
+  linkedin_ads_schema: DBT_MELTANO_LINKEDIN
   linkedin:
     ad_analytics_by_creative: "{{ ref('stg_linkedin_ads__ad_analytics_by_creative') }}"
     creative_history: "{{ ref('stg_linkedin_ads__creative_history') }}"
